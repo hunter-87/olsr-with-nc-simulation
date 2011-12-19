@@ -33,6 +33,9 @@ import inet.applications.udpapp.UDPApp;
 import inet.applications.tcpapp.TCPApp;
 import inet.applications.pingapp.PingApp;
 
+import inet.mobility.BasicMobility;
+
+
 
 //
 // Models a mobile host with a wireless (802.11g) card. This module is
@@ -50,6 +53,7 @@ module ManetNode
         string tcpAppType = default("");
         string udpAppType = default("");
         string routingFile = default("");
+        string mobilityType = default("NullMobility");
         @display("i=device/pocketpc_s");
 
     gates:
@@ -115,11 +119,16 @@ module ManetNode
         }
         //        wlan: Nic80211;
         //            display: "p=248,349;q=queue;i=block/ifcard";
-        mobility: NullMobility {
+//        mobility: NullMobility {
+//            parameters:
+//                //   x = x;
+//                //                y = y;
+//                @display("p=149,307;i=block/cogwheel");
+//        }
+        mobility: <mobilityType> like BasicMobility {
             parameters:
-                //   x = x;
-                //                y = y;
                 @display("p=149,307;i=block/cogwheel");
+                //@display("p=149,307");
         }
     connections allowunconnected:
         for i=0..numTcpApps-1 {
