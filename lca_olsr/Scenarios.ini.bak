@@ -1,0 +1,173 @@
+[Config NC_Disabled_QoS_Disabled_UDPBurst]
+## ---------- MAC ---------- ##
+**.UseQos80211e = false
+#**.classifierClass = "HiLoClassifier"
+#----------------------------#
+
+## ---------- NET ---------- ##
+**.Hello_ival = 2
+**.Tc_ival = 6
+**.nbHoldingTime = 12
+**.tcHoldingTime = 20
+
+#------- NETWORK CODING -----#
+**.NetworkCoding = false
+#----------------------------#
+
+#------------ UDP TRAFFIC --------------------#
+**.host[*].udpAppType="UDPBasicBurst"
+**.udpApp[*].localPort=1234
+**.udpApp[*].destPort=1234
+**.udpApp[*].messageLength = 512B
+**.host[0].udpApp[*].messageFreq = 0.001s
+**.host[1].udpApp[*].messageFreq = 0.001s
+**.host[*].udpApp[*].messageFreq = -1s
+**.udpApp[*].time_begin = 36s
+**.udpApp[*].time_end = 0s
+**.host[*].numUdpApps=1
+**.host[0].udpApp[0].destAddresses ="host[4]"
+**.host[1].udpApp[0].destAddresses ="host[5]"
+**.host[*].udpApp[0].destAddresses=""
+#---------------------------------------------#
+
+
+[Config NC_Enabled_QoS_Disabled_UDPBurst]
+
+## ---------- MAC ---------- ##
+**.UseQos80211e = false
+#**.classifierClass = "HiLoClassifier"
+#----------------------------#
+
+## ---------- NET ---------- ##
+**.Hello_ival = 2
+**.Tc_ival = 6
+**.nbHoldingTime = 12
+**.tcHoldingTime = 20
+
+#------- NETWORK CODING -----#
+**.NetworkCoding = true
+#----------------------------#
+
+#------------ UDP TRAFFIC --------------------#
+**.host[*].udpAppType="UDPBasicBurst"
+**.udpApp[*].localPort=1234
+**.udpApp[*].destPort=1234
+**.udpApp[*].messageLength = 512B
+**.host[0].udpApp[*].messageFreq = 0.001s
+**.host[1].udpApp[*].messageFreq = 0.001s
+
+**.host[*].udpApp[*].messageFreq = -1s
+**.udpApp[*].time_begin = 36s
+**.udpApp[*].time_end = 0s
+**.host[*].numUdpApps=1
+**.host[0].udpApp[0].destAddresses ="host[4]"
+**.host[1].udpApp[0].destAddresses ="host[5]"
+**.host[*].udpApp[0].destAddresses=""
+#---------------------------------------------#
+
+[Config NC_Disabled_QoS_Enabled_UDPBurst]
+## ---------- MAC ---------- ##
+**.UseQos80211e = true
+**.classifierClass = "HiLoClassifier"
+#----------------------------#
+
+## ---------- NET ---------- ##
+**.Hello_ival = 2
+**.Tc_ival = 6
+**.nbHoldingTime = 12
+**.tcHoldingTime = 20
+
+#------- NETWORK CODING -----#
+**.NetworkCoding = false
+#----------------------------#
+
+#------------ UDP TRAFFIC --------------------#
+**.host[*].udpAppType="UDPBasicBurst"
+**.udpApp[*].localPort=1234
+**.udpApp[*].destPort=1234
+**.udpApp[*].messageLength = 512B
+**.host[0].udpApp[*].messageFreq = 0.001s
+**.host[1].udpApp[*].messageFreq = 0.001s
+
+**.host[*].udpApp[*].messageFreq = -1s
+**.udpApp[*].time_begin = 36s
+**.udpApp[*].time_end = 0s
+**.host[*].numUdpApps=1
+**.host[0].udpApp[0].destAddresses ="host[4]"
+**.host[1].udpApp[0].destAddresses ="host[5]"
+**.host[*].udpApp[0].destAddresses=""
+#---------------------------------------------#
+
+
+[Config NC_Enabled_QoS_Enabled_UDPBurst]
+## ---------- MAC ---------- ##
+**.UseQos80211e = true
+**.classifierClass = "HiLoClassifier"
+#----------------------------#
+
+## ---------- NET ---------- ##
+**.Hello_ival = 2
+**.Tc_ival = 6
+**.nbHoldingTime = 12
+**.tcHoldingTime = 20
+
+#------- NETWORK CODING -----#
+**.NetworkCoding = true
+#----------------------------#
+
+#------------ UDP TRAFFIC --------------------#
+**.host[*].udpAppType="UDPBasicBurst"
+**.udpApp[*].localPort=1234
+**.udpApp[*].destPort=1234
+**.udpApp[*].messageLength = 512B
+**.host[0].udpApp[*].messageFreq = 0.001s
+**.host[1].udpApp[*].messageFreq = 0.001s
+
+**.host[*].udpApp[*].messageFreq = -1s
+**.udpApp[*].time_begin = 36s
+**.udpApp[*].time_end = 0s
+**.host[*].numUdpApps=1
+**.host[0].udpApp[0].destAddresses ="host[4]"
+**.host[1].udpApp[0].destAddresses ="host[5]"
+**.host[*].udpApp[0].destAddresses=""
+#---------------------------------------------#
+
+
+
+[Config NC_Disabled_QoS_Enabled_No_Traffic]
+## ---------- MAC ---------- ##
+**.UseQos80211e = true
+**.classifierClass = "HiLoClassifier"
+#----------------------------#
+
+## ---------- NET ---------- ##
+**.Hello_ival = 2
+**.Tc_ival = 6
+**.nbHoldingTime = 12
+**.tcHoldingTime = 20
+
+#------- NETWORK CODING -----#
+**.NetworkCoding = false
+#----------------------------#
+
+
+
+[Config NC_Enabled_QoS_Enabled_No_Traffic]
+## ---------- MAC ---------- ##
+**.UseQos80211e = true
+**.classifierClass = "HiLoClassifier"
+#----------------------------#
+
+## ---------- NET ---------- ##
+**.Hello_ival = 2
+**.Tc_ival = 6
+**.nbHoldingTime = 12
+**.tcHoldingTime = 20
+
+#------- NETWORK CODING -----#
+**.NetworkCoding = true
+#----------------------------#
+
+
+
+
