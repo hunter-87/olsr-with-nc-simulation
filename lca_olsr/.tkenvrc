@@ -1,2 +1,15 @@
 # Partial Tkenv config file -- see $HOME/.tkenvrc as well
+inspector "lca_net.host[6].udpApp[0]" "UDPAppNC" "1" "514x315+318+526:normal"
+inspector "lca_net.host[6]" "ManetNode" "2" "607x490+716+24:normal"
+inspector "lca_net" "lca_net" "2" "655x530+59+24:normal"
+inspector "lca_net.host[6].udp" "UDP" "1" "460x315+287+196:normal"
+inspector "lca_net.host[6].wlan[0]" "Ieee80211gNicAdhoc" "2" "617x338+814+532:normal"
+inspector "lca_net.host[0].udpApp[0]" "UDPAppNC" "1" "503x315+59+555:normal"
+inspector "lca_net.host[0]" "ManetNode" "2" "629x468+46+489:normal"
+inspector "lca_net.host[0].udpApp[2]" "UDPAppNC" "1" "507x315+675+555:normal"
+inspector "lca_net.host[0].udpApp[0]" "UDPAppNC" "3" "820x346+615+505:normal"
+inspector "lca_net.host[0].udpApp[1]" "UDPAppNC" "3" "820x346+611+218:normal"
+inspector "lca_net.host[6].networkLayer" "NetworkLayerGlobalArp" "2" "614x338+59+532:normal"
+inspector "lca_net.host[0].udpApp[2]" "UDPAppNC" "3" "820x346+611+24:normal"
+inspector "simulation.scheduled-events.UDPNC-16" "UDPPacket" "1" "460x315+971+24:normal"
 
